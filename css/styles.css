@@ -790,6 +790,7 @@ img {
 
 .update__img img {
   width: 100%;
+  height: 110%;
 }
 /* c right side */
 .update__right {
@@ -835,7 +836,8 @@ td {
 }
 
 .tags {
-  margin-top: 17rem;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
 }
 .update .tags {
   display: flex;

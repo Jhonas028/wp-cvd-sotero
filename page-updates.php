@@ -30,7 +30,7 @@
 
                         <div class="update__tags">
                             <ul>
-                                <li><i class="fa-solid fa-user"></i> Ray Balaaldia</li>
+                                <li><i class="fa-solid fa-user"></i> <?php the_author() ?></li>
                                 <li><i class="fa-solid fa-calendar-days"></i> <?php echo get_the_date('F j, Y'); ?></li>
                                 <li><i class="fa-solid fa-tags"></i> Web Design | Wire Frame</li>
                             </ul>
@@ -38,8 +38,8 @@
 
                         <div class="update__datas">
                             <h2><?php the_title(); ?></h2>
-                            <?php the_content(); ?>
-                            <a class="no-bg-btn" href="#">Read more...</a>
+                            <?php the_excerpt(); ?>
+                            <a class="no-bg-btn" href="<?php echo the_permalink() ?>" target="_blank"> Read more...</a>
                         </div>
 
                         <span class="line"></span>
@@ -49,8 +49,6 @@
                 wp_reset_postdata(); ?>
 
             </div>
-
-
             <!-- RIGHT SIDE -->
             <div class="update__right">
                 <!-- categories -->
@@ -88,8 +86,7 @@
                     <?php $recents = new WP_Query(array(
                         'post_type'      => 'updates',
                         'posts_per_page' => 3,
-                        'orderby'        => 'date',
-                        'order'          => 'DESC',
+
                     )); ?>
                     <?php if ($recents->have_posts()) : ?>
                         <?php while ($recents->have_posts()): $recents->the_post() ?>
@@ -125,8 +122,6 @@
 
                 <!-- end of right side -->
             </div>
-
-
         </div>
     </div>
 </section>
@@ -135,8 +130,8 @@
 <section class="cta">
     <div class="container">
         <div class="cta__info">
-            <h3> <?php echo the_field("cta_title") ?></h3>
-            <p> <?php echo the_field("cta_title_description") ?></p>
+            <h3>Feel free to talk to us about your Projects</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
             <a class="btn bg--dark" href="#">CONTACT US</a>
         </div>
     </div>

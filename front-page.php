@@ -99,7 +99,7 @@
             <div class="cards__details">
               <h5><?php the_title(); ?></h5>
               <p><?php the_excerpt(); ?></p>
-              <a class="no-bg-btn" href="#">Read more...</a>
+              <a class="no-bg-btn" href="<?php echo the_permalink() ?>">Read more...</a>
             </div>
           </div>
         <?php endwhile; ?>

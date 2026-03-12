@@ -96,7 +96,7 @@ function cvd_custom_post()
         'capability_type' => 'post',
         'show_ui' => true,
         'show_in_rest' => true,
-        'supports' => array('title', 'editor', 'excerpt', 'thumbnail')
+        'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'author')
     );
 
 
